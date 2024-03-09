@@ -1,3 +1,5 @@
+# Windows
+
 from tkinter import *
 import random, string, threading, math, sys
 from threading import *

@@ -1,17 +1,19 @@
+# Main
+
 import random, string, threading, math, sys, pathlib
 from threading import *
 
 path = pathlib.Path(__file__).parent.absolute()
 sys.path.insert(0, str(path) + '/modules')
 
-import castWindows, connections
+import castWindows, castConnections
 
 def idGenerator(size, chars=string.ascii_uppercase + string.digits):
   return ''.join(random.choice(chars) for _ in range(size))
 
 global secure
 secure = False
-statusId = idGenerator(6)
+statusId = "HHB"
 
 authorized = []
 
@@ -33,3 +35,4 @@ class returningThread(threading.Thread):
       return self.result
 
 castWindows.openInfoWindow(statusId)
+castConnections.startScreenCast(statusId)
