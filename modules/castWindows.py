@@ -39,7 +39,11 @@ def createInfoWindow(statusId):
     global secure
     secure = True
 
-  closeButton=Button(buttonFrame, text='Close', width=7, height=1, command=root.destroy)
+  def close():
+    root.destroy()
+    exit()
+
+  closeButton=Button(buttonFrame, text='Close', width=7, height=1, command=close)
   closeButton.grid(row=0, column=0, padx=5, pady=5)
 
   secureButton=Button(buttonFrame, text='Secure Cast', width=7, height=1, command=toggleSecure)

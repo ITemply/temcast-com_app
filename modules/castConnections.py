@@ -4,9 +4,6 @@ import socketio, threading, sys, pathlib, base64
 from PIL import ImageGrab
 from io import BytesIO
 
-path = pathlib.Path(__file__).parent.absolute()
-sys.path.insert(0, str(path) + '/modules')
-
 class returningThread(threading.Thread):
   def __init__(self, *args, **kwargs):
       super().__init__(*args, **kwargs)
@@ -46,4 +43,4 @@ def startScreenCast(sessionId):
   startCast = returningThread(target=captureScreen, args=(sessionId,))
   startCast.start()
 
-sio.connect('https://3000-itemply-temcast-r7oav6476dj.ws-us108.gitpod.io')
+sio.connect('https://3000-itemply-temcast-r7oav6476dj.ws-us108.gitpod.io', namespaces=['/'])

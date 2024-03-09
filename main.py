@@ -1,6 +1,6 @@
 # Main
 
-import random, string, threading, math, sys, pathlib
+import random, string, threading, math, sys, pathlib, time
 from threading import *
 
 path = pathlib.Path(__file__).parent.absolute()
@@ -13,7 +13,7 @@ def idGenerator(size, chars=string.ascii_uppercase + string.digits):
 
 global secure
 secure = False
-statusId = "HHB"
+statusId = "HBB"
 
 authorized = []
 
