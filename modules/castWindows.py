@@ -96,3 +96,5 @@ def openAcceptWindow(username):
 def openInfoWindow(statusId):
   mainWindow = returningThread(target=createInfoWindow, args=(statusId,))
   mainWindow.start()
+
+# - T
